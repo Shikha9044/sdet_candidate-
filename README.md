@@ -21,6 +21,35 @@ uvicorn app.main:app --port 8000 --reload
 ```
 MongoDB **6.0 or newer** is required (the grader uses 7.0). MongoDB Atlas free tier (M0) works.
 
+## Docker Setup & Execution
+
+You can build and run the application container using Docker:
+
+### 1. Build the Docker Image
+```bash
+docker build -t hrone-attendance-api .
+```
+
+### 2. Run the Container
+Using `.env` file:
+```bash
+docker run --rm -p 8000:8000 --env-file .env hrone-attendance-api
+```
+### 3. Stop the Container
+
+docker stop hrone-attendance-api
+### 4. Restart the Existing Container
+
+docker start hrone-attendance-api
+
+
+### 5. Verify the Application
+Once running, the API will be accessible at:
+- **API Base URL**: `http://localhost:8000`
+- **Interactive Swagger Docs**: `http://localhost:8000/docs`
+- **ReDoc Documentation**: `http://localhost:8000/redoc`
+
 ## Submit
 A public Git repository with `app/main.py`, `requirements.txt`, `REVIEW.md`, `DECISIONS.md` and a short `README.md`.
 No `.env`, no secrets, no Dockerfile.
+

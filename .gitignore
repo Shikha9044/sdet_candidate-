@@ -1,3 +1,11 @@
 __pycache__/
 *.py[cod]
 .env
+.venv
+venv/
+.docker/
+.dockerignore
+dockerfile
+Dockerfile
+docker-compose.override.yml
+*.docx
